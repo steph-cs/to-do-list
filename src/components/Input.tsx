@@ -1,8 +1,6 @@
-import React from "react";
-
 interface Props {
   type: string;
-  onChange: (event: InputEvent) => void;
+  onChange: (event: { target: { value: string; }}) => void;
   value: string;
 }
 
