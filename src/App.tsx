@@ -9,7 +9,7 @@ function App() {
   const [task, setTask] = useState("tarefa");
   const [tasksList, setTasksList] = useState<string[]>([]);
 
-  const handleChangeInput = (event) => {
+  const handleChangeInput = (event: { target: { value: string; }; }) => {
     const inputTask = event.target.value;
     setTask(inputTask);
   };
