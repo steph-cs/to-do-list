@@ -1,5 +1,5 @@
 import Button from "./Button";
-import "./List.css"
+import "./List.css";
 interface Props {
   itemsList: string[];
   deleteTask: (index: number) => void;
@@ -13,15 +13,18 @@ const List = ({ itemsList, deleteTask }: Props) => {
           className="list-group-item d-flex justify-content-between align-items-center"
           key={index}
         >
-          <input
-            className="form-check-input me-3 col-1"
-            type="checkbox"
-            value={index}
-            id={index.toString()}
-          />
-          <label className="form-check-label col-10" htmlFor={item}>
-            {item}
-          </label>
+          <div className="d-flex col">
+            <input
+              className="form-check-input me-3 "
+              type="checkbox"
+              value={index}
+              id={index.toString()}
+            />
+            <label className="form-check-label " htmlFor={item}>
+              {item}
+            </label>
+          </div>
+
           <Button
             onClick={() => deleteTask(index)}
             color="red"
